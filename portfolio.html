@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prajwal Lobo | DevOps Portfolio</title>
+    <style>
+        /* CSS STYLES */
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #06b6d4;
+            --text-main: #f1f5f9;
+            --text-dim: #94a3b8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 10%;
+            background: rgba(15, 23, 42, 0.9);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #334155;
+        }
+
+        .logo { font-weight: 800; font-size: 1.2rem; letter-spacing: 1px; }
+        .logo span { color: var(--accent); }
+
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 2rem; }
+        nav ul li a { 
+            text-decoration: none; 
+            color: var(--text-main); 
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        nav ul li a:hover { color: var(--accent); }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 10%;
+            background: radial-gradient(circle at top right, #1e293b, #0f172a);
+        }
+
+        h1 { font-size: 4rem; margin-bottom: 0.5rem; }
+        .title-sub { font-size: 1.5rem; color: var(--accent); font-weight: 400; margin-bottom: 2rem; }
+        
+        .badge {
+            background: rgba(6, 182, 212, 0.1);
+            color: var(--accent);
+            padding: 5px 15px;
+            border-radius: 20px;
+            border: 1px solid var(--accent);
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Sections */
+        section { padding: 100px 15%; }
+        h2 { font-size: 2rem; margin-bottom: 3rem; text-align: center; }
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--accent);
+            margin: 10px auto;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-item {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #334155;
+            transition: 0.3s ease;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.3);
+        }
+
+        /* Contact Form */
+        .contact-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 15px;
+        }
+
+        .form-group { margin-bottom: 20px; }
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            background: #0f172a;
+            border: 1px solid #334155;
+            color: white;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        input:focus, textarea:focus { border-color: var(--accent); }
+
+        .submit-btn {
+            background: var(--accent);
+            color: #0f172a;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover { opacity: 0.9; transform: scale(1.02); }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            border-top: 1px solid #334155;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            nav ul { display: none; } /* Simplified for mobile */
+            section { padding: 60px 5%; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">PRA JWAL<span>LOBO</span></div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="badge">B.Tech in IT</div>
+        <h1>Prajwal Lobo</h1>
+        <div class="title-sub">DevOps Engineer</div>
+        <p style="color: var(--text-dim); max-width: 600px;">
+            Specializing in infrastructure automation, CI/CD pipelines, and cloud-native solutions to accelerate software delivery.
+        </p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p>I am a DevOps Engineer with a solid foundation in Information Technology. My mission is to simplify complex deployment workflows and manage scalable, high-availability systems using modern automation tools.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2>DevOps Toolchain</h2>
+        <div class="skills-grid">
+            <div class="skill-item">Docker</div>
+            <div class="skill-item">Kubernetes</div>
+            <div class="skill-item">Jenkins</div>
+            <div class="skill-item">AWS / Cloud</div>
+            <div class="skill-item">Terraform</div>
+            <div class="skill-item">Ansible</div>
+            <div class="skill-item">Git / GitHub</div>
+            <div class="skill-item">Linux Bash</div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-container">
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" placeholder="Full Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email Address" required>
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" placeholder="Your Message..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Deploy Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>Built with &hearts; by Prajwal Lobo &copy; 2024</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple form interaction
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message Sent! (Note: This is a frontend demo)');
+        });
+    </script>
+</body>
+</html>
