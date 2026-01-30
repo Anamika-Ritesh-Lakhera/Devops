@@ -55,6 +55,27 @@
         h3 { margin: 10px 0 5px; color: #0984e3; }
         p { color: #636e72; font-size: 0.9rem; margin: 0; }
         .role { font-weight: bold; color: #2d3436; margin-bottom: 5px; }
+
+        /* Custom style for Anamika's clickable name */
+        .clickable-name {
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .clickable-name:hover {
+            color: #d63031;
+        }
+
+        /* Information reveal styling */
+        .info-box {
+            margin-top: 10px;
+            padding: 5px;
+            background: #f1f2f6;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #2d3436;
+            display: none; /* Hidden by default */
+            border-left: 3px solid #0984e3;
+        }
     </style>
 </head>
 <body>
@@ -70,21 +91,39 @@
             <p>CI/CD Specialist & Automation</p>
         </div>
 
+        <!-- MODIFIED PRASHANT SECTION -->
         <div class="team-card">
-            <div class="avatar">P</div>
+            <div class="avatar" style="background-color:#0984e3;">R</div>
             <h3>Prashant</h3>
-            <p class="role">Cloud Architect</p>
-            <p>AWS/Azure Infrastructure</p>
+            <p class="role">Senior Cloud & DevOps Engineer</p>
+            <p>Multi-Cloud & Infrastructure as Code</p>
+            <ul>
+                <li>Terraform & CloudFormation</li>
+                <li>Kubernetes & Docker</li>
+                <li>AWS • Azure • GCP</li>
+            </ul>
         </div>
 
         <div class="team-card">
             <div class="avatar">A</div>
-            <h3>Anamika</h3>
+            <h3 class="clickable-name" onclick="toggleAnamikaInfo()">Anamika</h3>
             <p class="role">Site Reliability Engineer</p>
             <p>Monitoring & Security</p>
+            <div id="anamika-info" class="info-box">No info</div>
         </div>
     </div>
 </div>
+
+<script>
+    function toggleAnamikaInfo() {
+        var info = document.getElementById("anamika-info");
+        if (info.style.display === "block") {
+            info.style.display = "none";
+        } else {
+            info.style.display = "block";
+        }
+    }
+</script>
 
 </body>
 </html>
